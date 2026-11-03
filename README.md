@@ -35,21 +35,6 @@ dataset with the required `--dataset` argument and use the same identifier in
 all three stages. Each dataset has an independent output directory under
 `artifacts/<dataset>/`.
 
-## Shared parameter settings
-
-All six datasets use screening weights
-`(w_V, w_M, w_D, w_T) = (0.25, 0.25, 0.25, 0.25)` and fusion coefficients
-`(lambda_q, lambda_e) = (0.50, 0.25)`. The fusion certainty score uses
-`rho = 0.60` for both binary and multiclass tasks.
-
-By default, FID is evaluated every 10 epochs using 2,048 real-image draws and
-2,048 generated images. Real images are sampled without replacement when
-at least 2,048 training images are available, and with replacement otherwise.
-The sampled real images, generated-image labels, and latent noise are held
-fixed across checkpoint evaluations within a run. The scripts do not set a
-random seed, so this does not imply identical samples or initialization
-across separate runs.
-
 ## Installation
 
 Python 3.9 or later is required.
