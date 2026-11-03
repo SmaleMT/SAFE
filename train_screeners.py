@@ -42,8 +42,8 @@ class ScreeningConfig:
     neighbors: int = 5
     contribution_balance: float = 0.55
     contribution_weight: float = 0.25
-    margin_weight: float = 0.30
-    density_weight: float = 0.20
+    margin_weight: float = 0.25
+    density_weight: float = 0.25
     teacher_weight: float = 0.25
     mmr_pool_factor: int = 4
     diversity_weight: float = 0.35

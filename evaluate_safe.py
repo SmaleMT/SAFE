@@ -50,10 +50,7 @@ def adaptive_entropy_fusion(
     margin = top_two[:, :, 1] - top_two[:, :, 0]
     certainty = 0.60 * (1.0 - entropy) + 0.40 * margin
 
-    if num_classes == 2:
-        lambda_quality, lambda_certainty = 0.50, 0.25
-    else:
-        lambda_quality, lambda_certainty = 4.00, 0.50
+    lambda_quality, lambda_certainty = 0.50, 0.25
     fusion_scores = (
         lambda_quality * quality[:, None]
         + lambda_certainty * certainty
